@@ -16,7 +16,7 @@ function App(props) {
     <>
       <Global styles={globalStyle} />
       <Switch>
-        <Route exact sensitive path='/home' component={Home} />
+        <Route strict sensitive path='/home' component={Home} />
         <Redirect from='/' to='/home' />
       </Switch>
     </>

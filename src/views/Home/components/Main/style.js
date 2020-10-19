@@ -1,12 +1,12 @@
 import styled, { setLabel } from 'utils/styled'
 
 export default (props) => ({
-  home() {
+  main() {
     return setLabel(styled.rem`
-      width: 100%;
-      height: 100%;
       display: flex;
       flex-direction: row;
+      width: calc(100% - 120px);
+      height: 100%;
     `)
   },
 })

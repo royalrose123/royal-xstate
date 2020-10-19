@@ -1,12 +1,13 @@
 import styled, { setLabel } from 'utils/styled'
 
 export default (props) => ({
-  home() {
+  navigation() {
     return setLabel(styled.rem`
-      width: 100%;
-      height: 100%;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      width: 120px;
+      height: 100%;
+      border-right: 1px solid black;
     `)
   },
 })

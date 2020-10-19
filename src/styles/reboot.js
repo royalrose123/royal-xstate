@@ -153,6 +153,7 @@ export default styled.rem`
   button,
   a {
     cursor: pointer;
+    text-decoration: none;
   }
 
   input {
@@ -162,21 +163,5 @@ export default styled.rem`
   input:disabled,
   textarea:disabled {
     background: none;
-  }
-
-  .rc-pagination-prev a:after {
-    content: '<' !important;
-  }
-
-  .rc-pagination-next a:after {
-    content: '>' !important;
-  }
-
-  .rc-pagination-jump-next:after,
-  .rc-pagination-jump-prev:after {
-    content: '...' !important;
-    color: #777 !important;
-    margin-top: -3px !important;
-    font-weight: bold !important;
   }
 `
