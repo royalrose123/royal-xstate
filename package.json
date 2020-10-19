@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/core": "7.9.0",
+    "@babel/core": "^7.9.0",
+    "@emotion/core": "^10.0.35",
     "@svgr/webpack": "4.3.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -59,7 +60,7 @@
     "react-app-polyfill": "^1.0.6",
     "react-dev-utils": "^10.2.1",
     "react-dom": "^16.14.0",
-    "resolve": "1.15.0",
+    "resolve": "^1.15.0",
     "resolve-url-loader": "3.1.1",
     "sass-loader": "8.0.2",
     "semver": "6.3.0",
