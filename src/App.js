@@ -1,14 +1,24 @@
 import React from 'react'
 import { Global } from '@emotion/core'
+import { Route, Switch, Redirect } from 'react-router-dom'
+import loadable from '@loadable/component'
+
+// Styles
 import globalStyle from 'styles/reboot'
 
-function App() {
+// PropTypes
+export const propTypes = {}
+
+const Home = loadable(() => import('./views/Home'))
+
+function App(props) {
   return (
     <>
       <Global styles={globalStyle} />
-      <div className='App'>
-        <div>app</div>
-      </div>
+      <Switch>
+        <Route exact sensitive path='/home' component={Home} />
+        <Redirect from='/' to='/home' />
+      </Switch>
     </>
   )
 }
