@@ -1,30 +1,24 @@
 import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import loadable from '@loadable/component'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 // Components
-// import Navigation from './components/Navigation'
+import Navigation from './components/Navigation'
 import Main from './components/Main'
 
 // Styles
 import getStyle from './style'
-import Navigation from './components/Navigation'
 
 // PropTypes
-export const propTypes = {
-  match: PropTypes.object,
-}
+export const propTypes = {}
 
 const Counter = loadable(() => import('./views/Counter'))
-const Calculator = loadable(() => import('./views/Calculator'))
+const Calculator = loadable(() => import('./views/Calculator'))
+const TodoList = loadable(() => import('./views/TodoList'))
 
 function Home(props) {
   const style = getStyle(props)
-
-  const { match } = props
-
-  console.log('Home match', match)
 
   return (
     <div css={style.home()}>
@@ -33,6 +27,7 @@ function Home(props) {
         <Switch>
           <Route strict sensitive path='/home/counter' component={Counter} />
           <Route strict sensitive path='/home/calculator' component={Calculator} />
+          <Route strict sensitive path='/home/todolist' component={TodoList} />
           <Redirect replace from='/' to='/home/counter' />
         </Switch>
       </Main>

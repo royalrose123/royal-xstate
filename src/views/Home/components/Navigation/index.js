@@ -18,6 +18,7 @@ function Navigation(props) {
     <div css={style.navigation()}>
       <NavItem name='Counter' path='counter' />
       <NavItem name='Calculator' path='calculator' />
+      <NavItem name='Todolist' path='todolist' />
     </div>
   )
 }
